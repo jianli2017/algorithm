@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3024860B22938430003AA6C6 /* Stack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3024860922938430003AA6C6 /* Stack.cpp */; };
+		3024860F22939E21003AA6C6 /* CircleSingleQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3024860D22939E21003AA6C6 /* CircleSingleQueue.cpp */; };
 		304FFA53228D587600551BD9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 304FFA52228D587600551BD9 /* main.cpp */; };
 		304FFA5B228D589200551BD9 /* SingleLinkList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 304FFA5A228D589200551BD9 /* SingleLinkList.cpp */; };
 		3050D577228E4F070058C29F /* DoubleLinkList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3050D575228E4F070058C29F /* DoubleLinkList.cpp */; };
@@ -30,6 +31,8 @@
 /* Begin PBXFileReference section */
 		3024860922938430003AA6C6 /* Stack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Stack.cpp; sourceTree = "<group>"; };
 		3024860A22938430003AA6C6 /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
+		3024860D22939E21003AA6C6 /* CircleSingleQueue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CircleSingleQueue.cpp; sourceTree = "<group>"; };
+		3024860E22939E21003AA6C6 /* CircleSingleQueue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CircleSingleQueue.hpp; sourceTree = "<group>"; };
 		304FFA4F228D587600551BD9 /* linkListCPP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = linkListCPP; sourceTree = BUILT_PRODUCTS_DIR; };
 		304FFA52228D587600551BD9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		304FFA5A228D589200551BD9 /* SingleLinkList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SingleLinkList.cpp; sourceTree = "<group>"; };
@@ -62,6 +65,15 @@
 			path = stack;
 			sourceTree = "<group>";
 		};
+		3024860C22939DDF003AA6C6 /* queque */ = {
+			isa = PBXGroup;
+			children = (
+				3024860D22939E21003AA6C6 /* CircleSingleQueue.cpp */,
+				3024860E22939E21003AA6C6 /* CircleSingleQueue.hpp */,
+			);
+			path = queque;
+			sourceTree = "<group>";
+		};
 		304FFA46228D587500551BD9 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +93,7 @@
 		304FFA51228D587600551BD9 /* linkListCPP */ = {
 			isa = PBXGroup;
 			children = (
+				3024860C22939DDF003AA6C6 /* queque */,
 				30248608229383F5003AA6C6 /* stack */,
 				3050D57D228EA3020058C29F /* DoubleLinkList */,
 				3050D578228EA1790058C29F /* SingleLInkList */,
@@ -167,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3024860F22939E21003AA6C6 /* CircleSingleQueue.cpp in Sources */,
 				3050D57B228EA1A50058C29F /* CicleSingleLinkList.cpp in Sources */,
 				304FFA53228D587600551BD9 /* main.cpp in Sources */,
 				3024860B22938430003AA6C6 /* Stack.cpp in Sources */,

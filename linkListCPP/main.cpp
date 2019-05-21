@@ -12,11 +12,13 @@
 #include "CicleSingleLinkList.hpp"
 
 #include "Stack.hpp"
+#include "CircleSingleQueue.hpp"
 
 void testSingleLinkList();
 void testDoubleLinkList();
 void testCircleSingleLinkList3();
 void testStack();
+void testQueue();
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "********************";
@@ -36,12 +38,18 @@ int main(int argc, const char * argv[]) {
     testCircleSingleLinkList3();
     
     
-    
+    std::cout << endl << endl ;
     std::cout << "********************";
     std::cout << "6. stack测试";
     std::cout << "********************" << endl;
     testStack();
     
+    
+    std::cout << endl << endl ;
+    std::cout << "********************";
+    std::cout << "7. 循环队列测试";
+    std::cout << "********************" << endl;
+    testQueue();
     
     return 0;
 }
@@ -164,25 +172,64 @@ void testCircleSingleLinkList3()
 void testStack()
 {
     Stack stack =  Stack();
-    for (int i =0; i<Stack::defaultSize; ++i) {
+    for (int i =1; i<= Stack::defaultSize; ++i) {
         stack.push(i);
     }
-    stack.print();
+    stack.print();//【1，2，3，4，5，6，7，8，9，10】
+    
     
     for (int i =0; i<5; ++i) {
         stack.pop();
     }
-    stack.print();
-    for (int i =0; i<10; ++i) {
+    
+    stack.print(); //【1，2，3，4，5，0，0，0，0，0】
+    
+    
+    for (int i =1; i<=10; ++i) {
         stack.push(i+10);
     }
-    stack.print();
+    stack.print();//【【1，2，3，4，5，11，12，13，14，15】
     
     
     stack.push(15);
-    stack.print();
+    stack.print();//【【1，2，3，4，5，11，12，13，14，15，16】
     
     cout << "top 元素" << stack.top() << endl;
   
 }
 
+void testQueue() {
+    CircleSingleQueue queue =  CircleSingleQueue();
+    for (int i =1; i<=CircleSingleQueue::defaultSize; ++i) {
+        queue.enqueue(i);
+    }
+    queue.print();
+    //[1,2,3,4,5,6,7,8,9,10]
+    
+    for (int i =0; i<5; ++i) {
+        queue.dequeue();
+    }
+    queue.print();
+    //[0,0,0,0,0,6,7,8,9,10]
+    
+    ///添加5个满了
+    for (int i =1; i<=5; ++i) {
+        queue.enqueue(i+10);
+    }
+    queue.print();
+    //[11,12,13,14,15,6,7,8,9,10]
+    
+    //
+    for (int i =1; i<=5; ++i) {
+        queue.enqueue(i+15);
+    }
+    queue.print();
+    //[6~20]
+    
+    queue.enqueue(21);
+//    queue.enqueue(22);
+//    queue.dequeue();
+    
+    queue.print();
+    
+}
