@@ -10,12 +10,29 @@
 #define Stack_hpp
 
 #include <stdio.h>
-using namespace std;
+
+
 
 class Stack {
+public:
+    static const int defaultSize = 10;
+private:
     
+    int *element;
+    int size = 0;
+    int capacity  = defaultSize;
+public:
+    Stack();
+    void push(int);
+    
+    int pop ();
+    
+    int top();
+    
+    void print();
+private:
+    void expand(int size);
 };
-
 
 
 #endif /* Stack_hpp */

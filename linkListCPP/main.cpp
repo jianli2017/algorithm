@@ -11,10 +11,12 @@
 #include "DoubleLinkList.hpp"
 #include "CicleSingleLinkList.hpp"
 
+#include "Stack.hpp"
 
 void testSingleLinkList();
 void testDoubleLinkList();
 void testCircleSingleLinkList3();
+void testStack();
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "********************";
@@ -32,6 +34,13 @@ int main(int argc, const char * argv[]) {
     std::cout << "3. 循环单链表 测试，添加和删除";
     std::cout << "********************" << endl;
     testCircleSingleLinkList3();
+    
+    
+    
+    std::cout << "********************";
+    std::cout << "6. stack测试";
+    std::cout << "********************" << endl;
+    testStack();
     
     
     return 0;
@@ -149,3 +158,31 @@ void testCircleSingleLinkList3()
     link->remove(0);
     link->print();
 }
+
+
+
+void testStack()
+{
+    Stack stack =  Stack();
+    for (int i =0; i<Stack::defaultSize; ++i) {
+        stack.push(i);
+    }
+    stack.print();
+    
+    for (int i =0; i<5; ++i) {
+        stack.pop();
+    }
+    stack.print();
+    for (int i =0; i<10; ++i) {
+        stack.push(i+10);
+    }
+    stack.print();
+    
+    
+    stack.push(15);
+    stack.print();
+    
+    cout << "top 元素" << stack.top() << endl;
+  
+}
+
